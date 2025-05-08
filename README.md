@@ -1,0 +1,2 @@
+# CIND-820---Capstone-Customer-Segmentation-Profitability-Forecasting-Retail-Marketing
+This repository contains the implementation of customer segmentation, profitability forecasting, and marketing optimization using retail sales data. The project focuses on identifying key customer segments, predicting future revenue, and optimizing marketing strategies through advanced statistical and machine learning techniques.
