@@ -4,9 +4,9 @@
 
 ## Branches 
 * **main** : _Project Overview_
-* **Beginning Steps, Sampling, Statistical Verification, EDA**
-* **Data Preprocessing**
-* **RQ1 - Clustering & RQ2- Monte Carlo Simulation**
+* #1 **Beginning Steps, Sampling, Statistical Verification, EDA**
+* #2 **Data Preprocessing**
+* #3 **RQ1 - Clustering & RQ2- Monte Carlo Simulation**
 
 ---
 
