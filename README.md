@@ -34,15 +34,16 @@ Outlier Detection:
 
 ---
 ## Files:
-- Data_Preprocessing_SYSTEMATIC.ipynb: Google Colab Notebook for preprocessing the systematic sampled dataset.
-- Data_Preprocessing_SRS.ipynb: Google Colab Notebook for preprocessing the simple random sampled dataset.
-- Data_Preprocessing_STRATIFIED.ipynb: Google Colab Notebook for preprocessing the stratified sampled dataset.
-- Systematic_train_data.csv: Training dataset after preprocessing (systematic sampling).
-- Systematic_test_data.csv: Testing dataset after preprocessing (systematic sampling).
-- SRS_train_data.csv: Training dataset after preprocessing (simple random sampling).
-- SRS_test_data.csv: Testing dataset after preprocessing (simple random sampling).
-- STRATIFIED_train_data.csv: Training dataset after preprocessing (stratified sampling).
-- STRATIFIED_test_data.csv: Testing dataset after preprocessing (stratified sampling).
+- Data_Preprocessing_SYSTEMATIC.ipynb: Google Colab Notebook for preprocessing the systematic sampled dataset
+- Data_Preprocessing_SRS.ipynb: Google Colab Notebook for preprocessing the simple random sampled dataset
+- Data_Preprocessing_STRATIFIED.ipynb: Google Colab Notebook for preprocessing the stratified sampled dataset
+- Systematic_train_data.csv: Training dataset after preprocessing (systematic sampling)
+- Systematic_test_data.csv: Testing dataset after preprocessing (systematic sampling)
+- SRS_train_data.csv: Training dataset after preprocessing (simple random sampling)
+- SRS_test_data.csv: Testing dataset after preprocessing (simple random sampling)
+- STRATIFIED_train_data.csv: Training dataset after preprocessing (stratified sampling)
+- STRATIFIED_test_data.csv: Testing dataset after preprocessing (stratified sampling)
+- Project Approach - Steps - Process Map.png (Process Map of Project)
 
 
 
