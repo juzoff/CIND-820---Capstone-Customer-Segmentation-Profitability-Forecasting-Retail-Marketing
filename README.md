@@ -16,18 +16,36 @@ Exploratory Data Analysis (EDA):
 - Conducted using ydata-profiling to assess data integrity, confirming no missing values, identifying outliers (e.g., total_sales: $100–$9,999), and verifying balanced categorical distributions.
 - Usage: Informed feature selection (RQ1), statistical test selection (RQ2), and predictive modeling (RQ3).
 
+Temporal Feature Extraction:
+- Extracted month and year from datetime columns for trend analysis.
+- Dropped original datetime columns to reduce dimensionality (Fader & Hardie, 2009).
+- Usage: Captures seasonal and temporal patterns for RQ1, RQ2, and RQ3.
+
+Outlier Detection:
+- Used Interquartile Range (IQR) method to identify outliers in numerical columns.
+- Usage: Informs subsequent outlier management strategies for robust modeling.
+
 ---
 ## Data Preprocessing Present:
-- Extracted a 30,000-record sample using simple random, systematic, and stratified sampling to ensure computational efficiency.
-- Validated sample representativeness with Anderson-Darling and Chi-square tests, achieving p-values > 0.05.
-- Conducted EDA using ydata-profiling to confirm no missing values, identify outliers, and guide feature engineering.
+- Split dataset into 70% training and 30% testing sets.
+- Engineered binary features (high_value_purchase, high_value_quantity) and renamed total_sales.
+- Extracted temporal features from datetime columns and dropped original dates.
+- Detected outliers using IQR, identifying high-value transactions and discounts.
 
 ---
 ## Files:
-- Collab notebook (CAPSTONE_Three_Sampling_Methods,_Statistical_Verification,_EDA.ipynb)
-- 4 html reports via ydata.profiling (Full Dataset, Simple Random Sampling Dataset, Stratified Dataset, Systematic Dataset)
-- 3 comparison reports (full dataset vs the 3 other sampled datasets)
-- Excel file visualizing the statistical verification for the 3 sampled datasets (SamplingMethods-Statistical Verification.xlsx)
+- Data_Preprocessing_SYSTEMATIC.ipynb: Google Colab Notebook for preprocessing the systematic sampled dataset.
+- Data_Preprocessing_SRS.ipynb: Google Colab Notebook for preprocessing the simple random sampled dataset.
+- Data_Preprocessing_STRATIFIED.ipynb: Google Colab Notebook for preprocessing the stratified sampled dataset.
+- Systematic_train_data.csv: Training dataset after preprocessing (systematic sampling).
+- Systematic_test_data.csv: Testing dataset after preprocessing (systematic sampling).
+- SRS_train_data.csv: Training dataset after preprocessing (simple random sampling).
+- SRS_test_data.csv: Testing dataset after preprocessing (simple random sampling).
+- STRATIFIED_train_data.csv: Training dataset after preprocessing (stratified sampling).
+- STRATIFIED_test_data.csv: Testing dataset after preprocessing (stratified sampling).
+
+
+
 
 
 
