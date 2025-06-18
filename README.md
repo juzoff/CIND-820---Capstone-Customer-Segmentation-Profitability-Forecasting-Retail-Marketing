@@ -7,14 +7,14 @@ This branch focuses on the initial steps of the CIND-820 Capstone project, inclu
 
 ---
 ## Branch Components
-Dataset Sampling:
-- A subset of 30,000 records was extracted using simple random, systematic, and stratified sampling, prioritizing stratification on income_bracket and loyalty_program (Ngai et al., 2009).
-- Representativeness was validated using Anderson-Darling tests for numerical features (e.g., total_transactions, avg_transaction_value) and Chi-square tests for categorical features (e.g., product_category, gender). P-values > 0.05 confirmed alignment with the full dataset (Field, 2018).
-- Usage: Provided a manageable dataset for EDA, feature engineering, and all RQs.
+Train-Test Partitioning:
+- Split the 30,000-record sampled dataset into 70% training (21,000 rows) and 30% testing (9,000 rows) sets with a random state of 42 and shuffling enabled to ensure reproducibility and prevent data leakage.
+- Usage: Provides unbiased datasets for model training and evaluation across all RQs.
 
-Exploratory Data Analysis (EDA):
-- Conducted using ydata-profiling to assess data integrity, confirming no missing values, identifying outliers (e.g., total_sales: $100–$9,999), and verifying balanced categorical distributions.
-- Usage: Informed feature selection (RQ1), statistical test selection (RQ2), and predictive modeling (RQ3).
+Feature Engineering:
+- Created binary features: high_value_purchase (avg_purchase_value > 75th percentile) and high_value_quantity (quantity > 75th percentile) to flag high-value transactions and bulk buyers (Fader & Hardie, 2009).
+- Renamed total_sales to total_sales_over_lastyear for clarity.
+- Usage: Enhances model interpretability and predictive power for RQ1, RQ2, and RQ3.
 
 Temporal Feature Extraction:
 - Extracted month and year from datetime columns for trend analysis.
