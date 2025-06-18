@@ -28,5 +28,6 @@ Exploratory Data Analysis (EDA):
 - 4 html reports via ydata.profiling (Full Dataset, Simple Random Sampling Dataset, Stratified Dataset, Systematic Dataset)
 - 3 comparison reports (full dataset vs the 3 other sampled datasets)
 - Excel file visualizing the statistical verification for the 3 sampled datasets (SamplingMethods-Statistical Verification.xlsx)
+- Project Approach - Steps - Process Map.png (Process Map of Project)
 
 
