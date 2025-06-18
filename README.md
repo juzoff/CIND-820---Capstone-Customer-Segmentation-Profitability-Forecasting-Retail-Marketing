@@ -8,7 +8,7 @@ This branch focuses on the initial steps of the CIND-820 Capstone project, inclu
 ---
 ## Branch Components
 Dataset Sampling:
-- A subset of 30,000 records was extracted using simple random, systematic, and stratified sampling, prioritizing stratification on income_bracket and loyalty_program (Ngai et al., 2009).
+- A subset of 30,000 records was extracted using simple random, systematic, and stratified sampling.
 - Representativeness was validated using Anderson-Darling tests for numerical features (e.g., total_transactions, avg_transaction_value) and Chi-square tests for categorical features (e.g., product_category, gender). P-values > 0.05 confirmed alignment with the full dataset (Field, 2018).
 - Usage: Provided a manageable dataset for EDA, feature engineering, and all RQs.
 
