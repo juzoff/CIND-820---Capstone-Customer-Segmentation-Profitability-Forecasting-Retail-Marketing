@@ -2,20 +2,22 @@
 
 ---
 
-## Project Description:
-This project focuses on customer segmentation, profitability forecasting, and marketing optimization using a comprehensive retail sales dataset to address the challenges of a highly competitive retail landscape. By leveraging advanced statistical and machine learning techniques, the project aims to segment customers into distinct groups based on transactional and demographic attributes, identify statistically significant features that differentiate these segments, and predict high-value customer clusters for targeted marketing. Through K-Means clustering and Principal Component Analysis (PCA), customers are grouped to uncover purchasing patterns, while statistical tests (ANOVA, Kruskal-Wallis, Chi-square) and Monte Carlo simulation estimate segment profitability under uncertainty, using metrics like purchase frequency and churn risk. Machine learning models, including Decision Trees, Random Forest, K-Nearest Neighbors, and Multinomial Logistic Regression, are employed to predict high-value segments, with techniques like Recursive Feature Elimination (RFE) and SMOTE addressing feature selection and class imbalance. Implemented in Python using libraries such as pandas, scikit-learn, and scipy on Google Colab, this ***capstone*** project delivers actionable insights for personalized marketing, optimized inventory, and enhanced customer retention, contributing to data-driven decision-making and improved profitability in retail.
+## Branch Description:
+This branch focuses on the initial steps of the CIND-820 Capstone project, including data sampling, statistical verification of representativeness, and exploratory data analysis (EDA) for the Retail Sales and Customer Behavior Analysis dataset (1,000,000+ records, 100+ features). These steps ensure a computationally efficient and representative dataset for subsequent preprocessing and analysis (RQ1: clustering, RQ2: profitability forecasting and statistical analysis, RQ3: predictive modeling).
+
+---
+Dataset Sampling:
+- A subset of 30,000 records was extracted using simple random, systematic, and stratified sampling, prioritizing stratification on income_bracket and loyalty_program (Ngai et al., 2009).
+- Representativeness was validated using Anderson-Darling tests for numerical features (e.g., total_transactions, avg_transaction_value) and Chi-square tests for categorical features (e.g., product_category, gender). P-values > 0.05 confirmed alignment with the full dataset (Field, 2018).
+- Usage: Provided a manageable dataset for EDA, feature engineering, and all RQs.
+
+Exploratory Data Analysis (EDA):
+- Conducted using ydata-profiling to assess data integrity, confirming no missing values, identifying outliers (e.g., total_sales: $100–$9,999), and verifying balanced categorical distributions (e.g., gender, loyalty_program) (Jolliffe & Cadima, 2016).
+Usage: Informed feature selection (RQ1), statistical test selection (RQ2), and predictive modeling (RQ3).
 
 ---
 
-## Research Questions:
-1. Can customers be grouped into distinct clusters based on behavior and demographics to uncover underlying customer segments?
-2. Which attributes are statistically significant in differentiating customer clusters, and how can we use the Monte Carlo simulation to estimate customer segment value?
-3. Which machine learning algorithm performs best in identifying the most valuable customer cluster based on significant attributes?
-
----
-
-## Dataset Chosen:
-https://www.kaggle.com/datasets/utkalk/large-retail-data-set-for-eda/data
+## Files:
 
 ---
 
