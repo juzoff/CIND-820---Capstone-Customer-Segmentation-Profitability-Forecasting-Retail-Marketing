@@ -17,7 +17,7 @@ Exploratory Data Analysis (EDA):
 - Usage: Informed feature selection (RQ1), statistical test selection (RQ2), and predictive modeling (RQ3).
 
 Visualization:
-- Table visualizing the statistical verification for the 3 sampled datasets
+- Table visualizing the statistical verification for the 3 sampled datasets.
 
 ---
 ## Data Preprocessing Present:
