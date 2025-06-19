@@ -16,6 +16,9 @@ Exploratory Data Analysis (EDA):
 - Conducted using ydata-profiling to assess data integrity, confirming no missing values, identifying outliers (e.g., total_sales: $100–$9,999), and verifying balanced categorical distributions.
 - Usage: Informed feature selection (RQ1), statistical test selection (RQ2), and predictive modeling (RQ3).
 
+Visualization:
+- Table visualizing the statistical verification for the 3 sampled datasets
+
 ---
 ## Data Preprocessing Present:
 - Extracted a 30,000-record sample using simple random, systematic, and stratified sampling to ensure computational efficiency.
