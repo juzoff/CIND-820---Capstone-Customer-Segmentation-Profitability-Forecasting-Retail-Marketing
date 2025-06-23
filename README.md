@@ -58,6 +58,7 @@ Visualizations:
 - SRS - RQ2 - Statistical Analysis - Part I: Google Colab Notebook for Chi-Square, normality analyses, and Kruskal-Wallis tests.
 - CAPSTONE - Statistical Analysis VIS: Google Colab Notebook visualizing/highlighting attributes with p-value less than or equal to .10.
 - Stratified - RQ2 - Statistical Analysis - Part II: Google Colab Notebook for Friedman tests, revenue calculations, and visualizations.
+- Project Approach - Steps - Process Map.png (Process Map of Project)
 
 
 
