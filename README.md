@@ -64,9 +64,9 @@ Visualizations:
 
 ---
 ## Files:
-- SRS_Clustering_MonteCarlo.ipynb: Google Colab Notebook for SRS preprocessing, K-Means clustering, Monte Carlo simulation, and revenue analysis.
-- Systematic_Clustering_MonteCarlo.ipynb: Google Colab Notebook for systematic sampling analysis.
-- Stratified_Clustering_MonteCarlo.ipynb: Google Colab Notebook for stratified sampling analysis.
+- SRS_RQ1_Clustering_&_RQ2_Monte_Carlo_Simulation: Google Colab Notebook for SRS K-Means clustering, Monte Carlo simulation, and revenue analysis.
+- Systematic_RQ1_Clustering_&_RQ2_Monte_Carlo_Simulation: Google Colab Notebook for Systematic K-Means clustering, Monte Carlo simulation, and revenue analysis.
+- Stratified_RQ1_Clustering_&_RQ2_Monte_Carlo_Simulation: Google Colab Notebook for Stratified K-Means clustering, Monte Carlo simulation, and revenue analysis.
 - Monte Carlo Simulation - Visual Comparison
 - Cluster Differences - Characteristics Differences - Visual
 
