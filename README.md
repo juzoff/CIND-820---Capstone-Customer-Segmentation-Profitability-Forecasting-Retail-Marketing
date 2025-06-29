@@ -11,7 +11,12 @@
 * #5 **RQ3 - Machine Learning Models**
   
 ---
+## Research Questions:
+1.	Can customers be grouped into distinct clusters based on behavior and demographics to uncover underlying customer segments?
+2.	Which attributes are statistically significant in differentiating customer clusters, how can we use the Monte Carlo simulation to estimate total mean sales revenue, and target the cluster with the highest total for marketing optimization, and how can the Friedman test be employed to evaluate key Monte Carlo simulation outputs; total_transactions, avg_transaction_value, total_discounts_recieved, and total_returned_value across customer clusters within four various blocks (promotion channel, type, season, product category) for further insights
+3.	Which machine learning algorithm performs best in identifying the most valuable customer cluster using performance metric ‘recall’, and how can further hyperparameter tuning be leveraged to increase model performance of the initial best-performing model?
 
+---
 ## Project Description:
 This project employs a comprehensive, data-driven methodology to address customer segmentation, profitability forecasting, and marketing optimization using a large-scale retail sales dataset with over one million records and 100+ features. The approach integrates advanced statistical and machine learning techniques to deliver actionable insights for retail decision-making in a competitive landscape. 
 
