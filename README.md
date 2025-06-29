@@ -33,6 +33,22 @@ Outlier Detection:
 - Detected outliers using IQR, identifying high-value transactions and discounts.
 
 ---
+## Findings/Results/Insights
+- Simple Random Sampling (SRS):
+  - Results: Loaded Simple_Random_Sample.csv (30,000 rows, 78 attributes); split into 70% train (21,000 rows), 30% test (9,000 rows). Added high_value_purchase (>75th percentile avg_purchase_value), high_value_quantity (>75th percentile quantity); renamed total_sales to total_sales_over_lastyear. Binned date columns (e.g., transaction_date) to month/year; dropped originals. No outliers in temporal attributes (e.g., days_since_last_purchase, transaction_month) via IQR method. Saved to srsstat_train_data.csv, srsstat_test_data.csv.
+  - Insights: Clean temporal distributions ensure reliable clustering (RQ1). Feature engineering enhances high-value customer identification (RQ3). No missing values support robust analysis.
+  - Implications: Ideal for unbiased RQ1 clustering and RQ3 modeling due to clean data.
+- Stratified Sampling:
+  - Results: Loaded Stratified_Sample.csv (30,000 rows, 78 attributes); split into 70% train (21,000 rows), 30% test (9,000 rows). Added high_value_purchase, high_value_quantity; renamed total_sales. Binned date columns; dropped originals. No outliers in key attributes (e.g., age, unit_price, avg_purchase_value) via IQR method. Saved to stratified_train_data.csv, stratified_test_data.csv.
+  - Insights: Stable distributions support income-based segmentation (RQ1). Feature engineering aids high-value customer prediction (RQ3). No missing values ensure reliability.
+  - Implications: Strong for income-driven RQ1 and RQ3 analyses, leveraging perfect income_bracket fidelity.
+- Systematic Sampling:
+  - Results: Loaded Systematic_Sample.csv (30,000 rows, 78 attributes); split into 70% train (21,000 rows), 30% test (9,000 rows). Added high_value_purchase, high_value_quantity; renamed total_sales. Binned date columns; dropped originals. No outliers in key attributes (e.g., customer_id, membership_years) via IQR method. Saved to systematic_train_data.csv, systematic_test_data.csv.
+  - Insights: Clean distributions, but potential ordering bias (e.g., customer_id) requires validation. Feature engineering supports RQ1 and RQ3.
+  - Implications: Suitable for RQ1 and RQ3 but needs bias validation due to systematic sampling risks.
+- Comparative Insights:
+  - All methods yield clean datasets with no outliers or missing values, ensuring robust RQ1 clustering and RQ3 modeling.
+---
 ## Files:
 - Data_Preprocessing_SYSTEMATIC.ipynb: Google Colab Notebook for preprocessing the systematic sampled dataset
 - Data_Preprocessing_SRS.ipynb: Google Colab Notebook for preprocessing the simple random sampled dataset
