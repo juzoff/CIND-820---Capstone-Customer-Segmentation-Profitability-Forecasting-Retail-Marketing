@@ -55,6 +55,36 @@ Visualizations:
 
 ---
 ## Findings/Results/Insights
+- Chi-Square Analysis:
+  - Results: 17 categorical attributes significantly associated with clusters (p < 0.05), e.g., last_purchase_month (Cramér’s V: 0.1526, moderate), promotion_end_month (0.1469, moderate), product_manufacture_month (0.1428, moderate). Non-significant: churned (p=0.9803, Cramér’s V: 0.0014). Saved to chi_square_results.csv, chi_square_bar_plot.png.
+  - Insights: Temporal attributes (last_purchase_month, promotion_end_month) strongly influence cluster differentiation, guiding RQ3 feature selection. Weak associations (e.g., churned) suggest limited predictive value.
+  - Implications: Prioritize temporal and purchase-related features for RQ3 machine learning.
+- Normality Testing:
+  - Results: All numeric attributes (e.g., customer_support_calls, product_review_count) non-normal (Anderson-Darling statistic: 74.8782–89.3025, p < 0.05, right-skewed). Saved to normality_results.csv, normality_histograms.png.
+  - Insights: Non-normal (log-normal/gamma) distributions justify transformations (e.g., log) for RQ3 modeling.
+  - Implications: Apply log-transformations to numeric features in RQ3 to stabilize variance.
+- Kruskal-Wallis Test:
+  - Results: Significant median differences (p < 0.05) in customer_support_calls (H: 1606.3266, Eta-Squared: 0.0764), product_review_count (H: 1625.4439, 0.0773), days_since_last_purchase (H: 1404.1092, 0.0668). Non-significant: quantity (p=0.8816). Saved to kruskal_wallis_results.csv.
+  - Insights: Cluster 0’s high engagement (customer_support_calls, product_review_count) drives differentiation, critical for RQ3 feature selection.
+  - Implications: Focus on engagement metrics for predictive modeling.
+- Friedman Tests:
+  - Results:
+    - Promotion Channel: Significant for total_transactions (p=0.0498, Cluster 0: ~57–58), total_discounts_received (p=0.0498), total_returned_value (p=0.0498). Non-significant for avg_transaction_value (p=0.0970).
+    - Product Category: Significant for total_transactions (p=0.0067, Cluster 0: ~56.8–57.8, highest in Groceries), avg_transaction_value (p=0.0224), total_discounts_received (p=0.0067), total_returned_value (p=0.0067).
+    - Promotion Type: Significant for total_transactions (p=0.0498, Cluster 0: ~56–58, highest in Buy One Get One Free), total_discounts_received (p=0.0498), total_returned_value (p=0.0498).
+    - Season: Significant for total_transactions (p=0.0183, Cluster 0: ~56.5–58.9, highest in Winter), avg_transaction_value (p=0.0388), total_discounts_received (p=0.0183).
+  - Insights: Cluster 0’s high transaction frequency (e.g., 58.34 for Buy One Get One Free, 58.91 in Winter) and engagement drive profitability across channels, categories, and seasons.
+  - Implications: Target Cluster 0 with digital and seasonal campaigns for RQ2 profitability.
+- Net Revenue (Cluster 0):
+  - Results:
+    - Promotion Channel: Online ($14,258.55), Social Media ($14,250.46), In-store ($13,942.04).
+    - Product Category: Groceries ($14,395.04), Clothing ($14,349.65), Electronics ($13,682.12).
+    - Promotion Type: Buy One Get One Free ($14,561.83), Flash Sale ($14,031.12), 20% Off ($13,847.37).
+    - Season: Winter ($14,626.67), Fall ($14,322.39), Summer ($13,783.68).
+  - Insights: Groceries, Clothing, Buy One Get One Free, and Winter/Fall campaigns maximize Cluster 0 revenue, driven by high transactions and low returns.
+  - Implications: Prioritize digital promotions (Online, Social Media), Groceries/Clothing, and Buy One Get One Free in Winter/Fall for RQ2 profitability.
+- Comparative Insights:
+  - Cluster 0’s high engagement (product_review_count, customer_support_calls) and transaction frequency (total_transactions) drive superior revenue ($14,258.55 Online, $14,626.67 Winter), making it the focus for RQ2 profitability and RQ3 modeling. Temporal attributes (last_purchase_month) and engagement metrics are key predictors for RQ3. Digital channels, Groceries/Clothing, and Buy One Get One Free promotions in Winter/Fall optimize marketing strategies.
 
 ---
 ## Files:
