@@ -54,6 +54,9 @@ Visualizations:
 - Filtered categorical/numeric columns to ensure compatibility with dataset attributes.
 
 ---
+## Findings/Results/Insights
+
+---
 ## Files:
 - SRS - RQ2 - Statistical Analysis - Part I: Google Colab Notebook for Chi-Square, normality analyses, and Kruskal-Wallis tests.
 - CAPSTONE - Statistical Analysis VIS: Google Colab Notebook visualizing/highlighting attributes with p-value less than or equal to .10.
