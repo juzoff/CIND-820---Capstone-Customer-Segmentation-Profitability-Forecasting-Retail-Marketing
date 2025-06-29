@@ -64,7 +64,27 @@ Visualizations:
 
 ---
 ## Findings/Results/Insights
-
+- Clustering (RQ1) - SRS Dataset:
+  - Results: K-Means with PCA (2 components) identified 3 optimal clusters via silhouette scores and elbow method. Saved to srs_clustering_results.csv, pca_scatter_plot.png, pc_contribution_heatmap.png.
+    - Cluster 0 (Multi-Channel High-Frequency Shoppers): High product_review_count (0.351882, PC1), total_transactions (0.255302, PC2), low days_since_last_purchase (-0.152263, PC1), distant stores (distance_to_store: 0.300149, PC2). Revenue: In-store $13,942.04, Online $14,258.55, Social Media $14,250.46 (total: $42,551.05).
+    - Cluster 1 (Proximity-Driven In-Store Bulk Shoppers): High total_items_purchased (0.214929, PC2), low online_purchases (-0.200433, PC2), close stores (distance_to_store: -0.269636, PC2).
+    - Cluster 2 (Infrequent Discount-Focused Shoppers): High days_since_last_purchase (0.353464, PC1), membership_years (0.225427, PC1), discount_applied (0.203976, PC1), low engagement (product_review_count: -0.387713, PC1).
+  - Insights: Cluster 0’s multi-channel engagement and high revenue make it a priority for cross-channel campaigns. Cluster 1 suits localized in-store offers. Cluster 2 requires discount-driven retention strategies.
+  - Implications: Cluster 0’s versatility drives RQ2 profitability and RQ3 predictive modeling.
+- Clustering (RQ1) - Stratified & Systematic Datasets:
+  - Results: Both datasets confirmed 3 optimal clusters via silhouette scores and elbow method, consistent with SRS. Saved to stratified_clustering_results.csv, systematic_clustering_results.csv.
+  - Insights: Consistent cluster structures validate segmentation across sampling methods, but SRS’s unbiased nature enhances reliability for RQ1.
+  - Implications: Stratified supports income-based segmentation; Systematic needs bias validation (e.g., customer_id).
+- Monte Carlo Simulation (RQ2) - SRS Dataset:
+  - Results: Cluster 0: Highest mean revenue ($8,739.37), non-churned $17,064.81 (5th-95th: $0.00–$36,540.89). Cluster 1: $6,184.55 (non-churned $12,200.96). Cluster 2: $7,135.47 (non-churned $13,991.38). Churn sensitivity: 89% revenue drop at 90% churn (Cluster 0: $15,416.33 at 10% to $1,695.87 at 90%). Non-normal distributions confirmed (Anderson-Darling statistics: 74.8782–89.3025). Saved to srs_monte_carlo_results.csv.
+  - Insights: Cluster 0’s high revenue and churn sensitivity prioritize retention strategies. Non-normal distributions support log-normal assumptions.
+  - Implications: Guides RQ2 profitability forecasting and RQ3 feature selection (e.g., total_transactions).
+- Monte Carlo Simulation (RQ2) - Stratified & Systematic Datasets:
+  - Results: Stratified: Cluster 0 ($7,001.12), Cluster 1 ($8,195.98), Cluster 2 ($6,106.06). Systematic: Cluster 0 ($7,000.56), Cluster 1 ($6,602.32), Cluster 2 ($7,809.46). Saved to stratified_monte_carlo_results.csv, systematic_monte_carlo_results.csv.
+  - Insights: SRS’s higher Cluster 0 revenue reflects its representativeness. Stratified and Systematic show consistent trends but lower revenue.
+  - Implications: SRS is preferred for RQ2; Stratified suits income-focused analyses.
+- Comparative Insights:
+  - SRS’s Cluster 0 is the high-value segment ($42,551.05 total revenue), ideal for RQ1 clustering and RQ2 forecasting due to unbiased sampling. Stratified supports income-driven analyses, while Systematic requires bias validation. High churn sensitivity across datasets emphasizes retention strategies for RQ2 and predictive features (e.g., days_since_last_purchase) for RQ3.
 
 ---
 ## Files:
