@@ -63,6 +63,10 @@ Visualizations:
 - Checked normality of Monte Carlo input variables, confirming log-normal distributions.
 
 ---
+## Findings/Results/Insights
+
+
+---
 ## Files:
 - SRS_RQ1_Clustering_&_RQ2_Monte_Carlo_Simulation: Google Colab Notebook for SRS K-Means clustering, Monte Carlo simulation, and revenue analysis.
 - Systematic_RQ1_Clustering_&_RQ2_Monte_Carlo_Simulation: Google Colab Notebook for Systematic K-Means clustering, Monte Carlo simulation, and revenue analysis.
