@@ -57,8 +57,9 @@ Model Evaluation:
 - Applied SMOTE and RandomUnderSampler for balanced variations (30,000 samples, 10,000 per cluster; tuned model: 32,000 samples with Cluster 0 at 12,000).
 ---
 ## Files:
-- Random_Forest.iynb - Google Colab Notebook for the 4 Random Forest model variations
-- 
+- Random_Forest.ipynb - Google Colab Notebook for the 4 Random Forest model variations
+- Decision_Tree.ipynb - Google Colab Notebook for the 4 Decision Tree model variations
+- KNN.ipynb - Google Colab Notebook for the 4 KNN model variations
 
 
 
