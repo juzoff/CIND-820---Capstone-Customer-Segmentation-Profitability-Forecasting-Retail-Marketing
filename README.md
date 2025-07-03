@@ -84,7 +84,7 @@ Visualizations:
   - Insights: SRS’s higher Cluster 0 revenue reflects its representativeness. Stratified and Systematic show consistent trends but lower revenue.
   - Implications: SRS is preferred for RQ2; Stratified suits income-focused analyses.
 - Comparative Insights:
-  - SRS’s Cluster 0 is the high-value segment ($42,551.05 total revenue), ideal for RQ1 clustering and RQ2 forecasting due to unbiased sampling. Stratified supports income-driven analyses, while Systematic requires bias validation. High churn sensitivity across datasets emphasizes retention strategies for RQ2 and predictive features (e.g., days_since_last_purchase) for RQ3.
+  - SRS’s Cluster 0 is the high-value segment ($8,739.37), ideal for RQ2 statistical analysis and RQ3 machine learning models due to unbiased sampling. Stratified supports income-driven analyses, while Systematic requires bias validation. High churn sensitivity across datasets emphasizes retention strategies for RQ2 and predictive features (e.g., days_since_last_purchase) for RQ3.
 
 ---
 ## Files:
