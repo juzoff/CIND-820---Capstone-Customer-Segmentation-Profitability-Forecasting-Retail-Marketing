@@ -64,6 +64,7 @@ Model Evaluation:
 - Random_Forest.ipynb - Google Colab Notebook for the 4 Random Forest model variations
 - Decision_Tree.ipynb - Google Colab Notebook for the 4 Decision Tree model variations
 - KNN.ipynb - Google Colab Notebook for the 4 KNN model variations
+- RQ3_Visual - Google Colab Notebook for visual of results across the 12 models + further hyperparameter tuned model
 
 
 
