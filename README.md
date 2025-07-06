@@ -35,6 +35,10 @@ This project employs a comprehensive, data-driven methodology to address custome
 - Interpretability and Actionability: Analytical outputs are designed for transparency and practical application. Clustering results highlight influential attributes driving segment differences, Monte Carlo outputs provide probabilistic revenue estimates for prioritizing high-value segments, and machine learning models offer clear feature importance rankings. These insights enable retailers to design personalized promotions, optimize marketing spend, align inventory with high-value segments, and enhance customer retention, fostering data-driven decisions to maximize profitability in a competitive retail environment.
 
 ---
+## Project Approach:
+<img width="881" alt="Project Approach - Steps - Process Map" src="https://github.com/user-attachments/assets/51c61967-7d50-4e90-b51d-08bed9221d12" />
+
+
 
 
 
