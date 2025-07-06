@@ -58,6 +58,18 @@ Model Evaluation:
 
 ---
 ## Findings/Results/Insights
+- Model Testing:
+  - Evaluated Decision Trees, KNN, and Random Forest on test set (9,000 rows) with recall as primary metric (target ≥ 0.90). Decision Trees: recall 0.53–0.55; KNN: recall 0.63–0.68; Random Forest: recall 0.66-0.72
+  - Insights: From the 12 models, the Random Forest - Balanced - All Features Model contained the highest recall (0.72). This model was used for further hyperparameter purposes to attempt to increase its recall 
+
+![image](https://github.com/user-attachments/assets/a6f2bd5f-488c-4e57-954d-0f6716431198)
+
+- Further Hyperparameter Tuned Results:
+  - recall 0.84, precision 0.76, F1-score 0.80, specificity 0.8353. 5-fold StratifiedKFold CV: mean F1-score 0.7400 (scores: [0.7365, 0.7488, 0.7381, 0.7398, 0.7367], std: 0.0045)
+  - Insights: Tuned Random Forest improved recall by 0.12 (0.72 to 0.84) via class weights and increased Cluster 0 samples, though below 0.90 target. Low CV standard deviation (0.0045) confirms stable performance.  Top features: customer_support_calls, product_review_count, days_since_last_purchase, online_purchases.
+  - Implications: Tuned Random Forest is robust for predicting Cluster 0 (high-value shoppers), supporting targeted marketing in RQ3.
+
+![image](https://github.com/user-attachments/assets/1b460a11-5f4d-4507-99e1-c747c7a73eeb)
 
 ---
 ## Files:
