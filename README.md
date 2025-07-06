@@ -13,7 +13,7 @@ Dataset Sampling:
 - Usage: Provided a manageable dataset for EDA, feature engineering, and all RQs.
 
 Exploratory Data Analysis (EDA):
-- Conducted using ydata-profiling to assess data integrity, confirming no missing values, identifying outliers (e.g., total_sales: $100–$9,999), and verifying balanced categorical distributions.
+- Conducted using ydata-profiling to assess data integrity, confirming no missing values, identifying outliers, and verifying balanced categorical distributions.
 - Usage: Informed feature selection (RQ1), statistical test selection (RQ2), and predictive modeling (RQ3).
 
 Visualization:
@@ -22,7 +22,7 @@ Visualization:
 ---
 ## Data Preprocessing Present:
 - Extracted a 30,000-record sample using simple random, systematic, and stratified sampling to ensure computational efficiency.
-- Validated sample representativeness with Anderson-Darling and Chi-square tests, achieving p-values > 0.05.
+- Validated sample representativeness with Anderson-Darling and Chi-square tests.
 - Conducted EDA using ydata-profiling to confirm no missing values, identify outliers, and guide feature engineering.
 
 ---
