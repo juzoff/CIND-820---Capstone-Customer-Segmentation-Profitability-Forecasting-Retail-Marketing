@@ -74,6 +74,9 @@ Visualizations:
   - Insights: Cluster 0’s high revenue and churn sensitivity prioritize retention strategies. Non-normal distributions support log-normal assumptions.
   - Implications: Guides RQ2 profitability forecasting and RQ3 feature selection (e.g., total_transactions).
 
+![image](https://github.com/user-attachments/assets/5eab3026-35bb-4e60-8bd9-d11b32fb33df)
+
+
 - Monte Carlo Simulation (RQ2) - Stratified & Systematic Datasets:
   - Results: Stratified: Cluster 0 ($7,001.12), Cluster 1 ($8,195.98), Cluster 2 ($6,106.06). Systematic: Cluster 0 ($7,000.56), Cluster 1 ($6,602.32), Cluster 2 ($7,809.46). Saved to stratified_monte_carlo_results.csv, systematic_monte_carlo_results.csv.
   - Insights: SRS’s higher Cluster 0 revenue reflects its representativeness. Stratified and Systematic show consistent trends but lower revenue.
@@ -84,7 +87,10 @@ Visualizations:
 
 - Further Clustering Insights (RQ1) - SRS Dataset:
   - Results: K-Means with PCA (2 components) identified 3 optimal clusters via silhouette scores and elbow method. Saved to srs_clustering_results.csv, pca_scatter_plot.png, pc_contribution_heatmap.png.
-    - Cluster 0 (Multi-Channel High-Frequency Engaged Shoppers with Distant Store Access): High product_review_count (0.351882, PC1), total_transactions (0.255302, PC2), low days_since_last_purchase (-0.152263, PC1), distant stores (distance_to_store: 0.300149, PC2).
+    - Cluster 0 (Multi-Channel High-Frequency Engaged Shoppers with Distant Store Access): High product_review_count (0.167, PC1), distance_to_store (0.300, PC2), online_purchases (0.223, PC2), days_since_last_purchase (-0.152, PC1), in_store_purchases (0.012, PC1), website_visits (0.097, PC2).
+      ![image](https://github.com/user-attachments/assets/cd3c1f6e-7291-4f1e-bd58-f2c67e17bacb)
+      - *The above chart was used through standardizing the attribute values (excluding the "Cluster" column) by applying min-max scaling to ensure all features are on a comparable scale (0 to 1), then creating a parallel coordinates plot to visualize the standardized profiles of three customer clusters, with each line representing a cluster's characteristics across multiple features, annotated with PCA loadings for interpretability, and includes a descriptive caption explaining the clusters and axes*
+
     - Cluster 1 (Proximity-Driven Frequent In-Store Bulk Shoppers): High total_items_purchased (0.214929, PC2), low online_purchases (-0.200433, PC2), close stores (distance_to_store: -0.269636, PC2).
     - Cluster 2 (Infrequent Discount-Focused Long-Term Shoppers): High days_since_last_purchase (0.353464, PC1), membership_years (0.225427, PC1), discount_applied (0.203976, PC1), low engagement (product_review_count: -0.387713, PC1).
   - Insights: Cluster 0’s multi-channel engagement and high revenue make it a priority for cross-channel campaigns. Cluster 1 suits localized in-store offers. Cluster 2 requires discount-driven retention strategies.
