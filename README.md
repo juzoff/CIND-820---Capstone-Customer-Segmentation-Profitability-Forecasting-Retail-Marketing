@@ -31,18 +31,24 @@ Visualization:
   - Results: 2 attributes with p ≤ 0.05 (promotion_id: p=0.0036, product_category: p=0.041); 6 with p ≤ 0.10 (incl. avg_transaction_value: p=0.0531). Saved to srs_ks_results.csv, srs_chi_square_results.csv.
   - Insights: Most representative (fewest differences). Minor product_category bias may affect RQ1 segmentation. avg_transaction_value (~0.61% mean increase) has minimal impact.
   - Implications: Ideal for unbiased RQ1 clustering and RQ3 machine learning. Monitor product_category in RQ2.
+
 - Stratified Sampling:
   - Results: 3 attributes with p ≤ 0.05 (transaction_id: p=0.0204, max_single_purchase_value: p=0.0230, customer_state: p=0.035); 7 with p ≤ 0.10 (incl. payment_method: p=0.064). Saved to stratified_ks_results.csv, stratified_chi_square_results.csv.
   - Insights: Moderately representative, perfect for income_bracket (p=1.0). max_single_purchase_value and customer_state may bias high-value and regional analyses.
   - Implications: Strong for income-driven RQ1 clustering and RQ3 modeling. Validate biases in RQ2 profitability.
+
 - Systematic Sampling:
   - Results: 3 attributes with p ≤ 0.05 (customer_id: p=0.0056, product_material: p=0.007, product_brand: p=0.020); 10 with p ≤ 0.10 (incl. product_return_rate: p=0.0537). Saved to systematic_ks_results.csv, systematic_chi_square_results.csv.
   - Insights: Least representative due to ordering bias (customer_id). product_material and product_brand may skew product marketing insights.
   - Implications: Risky for RQ1 and RQ3 due to bias. Requires validation before use.
+
 - Comparative Insights:
   - SRS is most representative (2 at p ≤ 0.05, 6 at p ≤ 0.10), best for RQ1 and RQ3.
   - Stratified excels for income-based RQ2 and RQ3 (3 at p ≤ 0.05, 7 at p ≤ 0.10).
   - Systematic is least reliable (3 at p ≤ 0.05, 10 at p ≤ 0.10). 
+
+![image](https://github.com/user-attachments/assets/27ce7e5a-45c6-4616-974d-72cebea37cad)
+
 
 ---
 ## Files:
