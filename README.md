@@ -55,6 +55,10 @@ Model Evaluation:
 - Filtered features with p-value ≤ 0.10 from RQ2 statistical analyses.
 - Imputed missing values (mean for numeric, most_frequent for categorical), scaled numeric features, and one-hot encoded categorical features.
 - Applied SMOTE and RandomUnderSampler for balanced variations (30,000 samples, 10,000 per cluster; tuned model: 32,000 samples with Cluster 0 at 12,000).
+
+---
+## Findings/Results/Insights
+
 ---
 ## Files:
 - Random_Forest.ipynb - Google Colab Notebook for the 4 Random Forest model variations
