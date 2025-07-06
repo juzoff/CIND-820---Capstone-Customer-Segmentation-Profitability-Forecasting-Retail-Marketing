@@ -17,7 +17,7 @@ Data Balancing:
 - Usage: Ensures balanced class distribution to improve model performance for Cluster 0.
 
 Feature Preprocessing:
-- Filtered features with p-value ≤ 0.10 from RQ2 (e.g., last_purchase_month, product_review_count, total_transactions).
+- Utilized and filteres for features with p-value ≤ 0.10 from RQ2 (e.g., last_purchase_month, product_review_count, total_transactions).
 - Used ColumnTransformer with SimpleImputer (mean for numeric, most_frequent for categorical), StandardScaler for numeric features, and OneHotEncoder (drop='first', handle_unknown='ignore') for categorical features (Hastie et al., 2009).
 - Usage: Prepares features for model training and ensures consistency across datasets.
 
@@ -33,15 +33,15 @@ Model Training and Variations:
   - Variations: (1) Without Balancing – All Features, (2) Without Balancing – Selected Features, (3) With Balancing – All Features, (4) With Balancing – Selected Features.
 - Random Forest:
   - Algorithm: RandomForestClassifier with GridSearchCV (parameters: n_estimators=[50, 100, 150], max_depth=[None, 10, 15, 20], min_samples_split=[2, 5, 10], min_samples_leaf=[1, 2, 4], criterion='gini') (Breiman, 2001).
-  - Variations: Same as Decision Tree.
+  - Variations: (1) Without Balancing – All Features, (2) Without Balancing – Selected Features, (3) With Balancing – All Features, (4) With Balancing – Selected Features.
 - KNN:
   - Algorithm: KNeighborsClassifier with RandomizedSearchCV (parameters: n_neighbors=3–20, weights=['uniform', 'distance'], metric=['euclidean', 'manhattan', 'minkowski']) (Cover & Hart, 1967).
-  - Variations: Same as Decision Tree.
+  - Variations: (1) Without Balancing – All Features, (2) Without Balancing – Selected Features, (3) With Balancing – All Features, (4) With Balancing – Selected Features.
 - Usage: Evaluates multiple models to identify the best for Cluster 0 prediction.
 
 Further Hyperparameter Tuning:
-- Selected the model variation with the highest Cluster 0 recall (Random Forest, assumed based on robustness).
-- Data: Combined dataset (30,000 entries) with 50 significant features, SMOTE oversampled Cluster 0 to 12,000, Cluster 2 to 10,000, and RandomUnderSampler reduced Cluster 1 to 10,000 (total: 32,000).
+- Selected 1 of the 12 models with the highest Cluster 0 recall for further hyperparameter tuning to maximize identification of high-value customers (metric 'recall') for marketing optimization.
+- Data: SMOTE oversampled Cluster 0 to 12,000, Cluster 2 to 10,000, and RandomUnderSampler reduced Cluster 1 to 10,000 (total: 32,000).
 - Model: RandomForestClassifier with class weights (Cluster 0: 1.5, Cluster 1: 1.0, Cluster 2: 1.0) and GridSearchCV (expanded grid: n_estimators=[50, 100, 150, 200, 250], max_depth=[None, 10, 15, 20, 25, 30], min_samples_split=[2, 5, 10], min_samples_leaf=[1, 2, 4, 6, 8], criterion='gini') using weighted F1-score (Breiman, 2001).
 - Usage: Optimizes Cluster 0 recall for targeted marketing.
 
