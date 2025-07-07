@@ -2,41 +2,18 @@
 
 ---
 
-## Branches 
-* **main** : _Project Overview_
-* #1 **Beginning Steps, Sampling, Statistical Verification, EDA**
-* #2 **Data Preprocessing**
-* #3 **RQ1 - Clustering & RQ2- Monte Carlo Simulation**
-* #4 **RQ2 - Statistical Analysis**
-* #5 **RQ3 - Machine Learning Models**
-  
+## Practical Applications
+- Targeted Marketing Campaigns for Cluster 0:
+  - Cluster 0’s high revenue ($8,739.37, non-churned: $17,064.81) and multi-channel engagement make it the priority for marketing. The Friedman test’s block-specific insights (Online/Social Media: $14,258.55–$14,250.46, Groceries: $14,395.04, Buy One Get One Free: $14,561.83, Winter: $14,626.67) guide precise campaigns:
+    - Digital Campaigns: Leverage Cluster 0’s high online engagement (online_purchases: 0.223115 from PC2, PCA loadings [0.211415 for PC1, 0.227419 for PC2]) and social media activity (promotion_channel_social_media: 0.003437 from PC1, PCA loadings [0.003437 for PC1, 0.0 for PC2]) to deploy social media ads for Groceries and Clothing during Winter and Fall. Use Buy One Get One Free offers to drive transactions, capitalizing on Cluster 0’s responsiveness (transactions: 58.34 for Buy One Get One Free).
+    - Personalized Messaging: Target Cluster 0’s distant shoppers (distance_to_store: 0.300149 from PC2, PCA loadings [0.024249 for PC1, 0.305939 for PC2]) with personalized email or app-based promotions, emphasizing convenience and digital accessibility, aligned with their high engagement (product_review_count: 0.167017 from PC1, PCA loadings [0.351882 for PC1, 0.032676 for PC2]; customer_support_calls: 0.110766 from PC1, PCA loadings [0.233369 for PC1, 0.265792 for PC2]).
+    - Engagement-Driven Promotions (Priority): Prioritize loyalty rewards and exclusive previews for Cluster 0 due to its high transaction frequency (total_transactions: 0.255302 from PC2, PCA loadings [0.018509 for PC1, 0.260227 for PC2]) but low membership duration (membership_years: -0.097108 from PC1, PCA loadings [0.204593 for PC1, 0.054198 for PC2]). This indicates that Cluster 0 customers are highly active but not necessarily long-term members, making retention through engagement-driven incentives critical to prevent churn and sustain their high-value contributions ($8,739.37 total mean sales revenue). Offer exclusive product previews or tiered loyalty rewards (e.g., bonus points for frequent online purchases) via social media and online platforms to encourage repeat purchases and foster long-term loyalty.
+  - Retention Strategies: Address Cluster 0’s churn sensitivity (89% revenue drop at 90% churn) with loyalty programs tailored to its multi-channel, high frequency, engaged shoppers with distance store access profile. Implement proactive support via chatbots or dedicated agents to maintain high-value relationships.
+  - Real-Time Customer Identification: Deploy the further hyperparameter tuned Random Forest - Balanced - All Attributes model (recall: 0.84) in CRM systems for real-time classification of Cluster 0 customers.
 ---
-## Research Questions:
-1.	Can customers be grouped into distinct clusters based on behavior and demographics to uncover underlying customer segments?
-2.	Which attributes are statistically significant in differentiating customer clusters, how can we use the Monte Carlo simulation to estimate total mean sales revenue, and target the cluster with the highest total for marketing optimization, and how can the Friedman test be employed to evaluate key Monte Carlo simulation outputs; total_transactions, avg_transaction_value, total_discounts_recieved, and total_returned_value across customer clusters within four various blocks (promotion channel, type, season, product category) for further insights?
-3.	Which machine learning algorithm performs best in identifying the most valuable customer cluster using performance metric ‘recall’, and how can further hyperparameter tuning be leveraged to increase model performance of the initial best-performing model?
-
----
-## Project Description:
-This project employs a comprehensive, data-driven methodology to address customer segmentation, profitability forecasting, and marketing optimization using a large-scale retail sales dataset with over one million records and 100+ features. The approach integrates advanced statistical and machine learning techniques to deliver actionable insights for retail decision-making in a competitive landscape. 
-
-- Data Sampling and Validation: To ensure computational efficiency while maintaining representativeness, a sample of 30,000 records is drawn using simple random, systematic, and stratified sampling techniques. The sample’s representativeness is validated using Kolmogorov-Smirnov (K-S) tests for numeric attributes and Chi-square tests for categorical attributes, testing the null hypothesis (H₀) that the sample’s distribution matches the full dataset’s distribution against the alternative hypothesis (H₁) that they differ. P-values will assess statistical significance, ensuring the sample reflects real-world retail patterns (e.g., average transaction values and purchase frequency aligned with industry benchmarks from McKinsey or Forrester).
-
-- Data Preprocessing: Post-sampling, the dataset is split into training and test sets (70/30 split) to prevent data leakage and support robust model development and evaluation. Feature engineering includes date binning and feature extraction from datetime data (e.g., extracting day, month, or purchase recency). Missing values, if present, are handled via imputation (e.g., mean/median for numeric, mode for categorical) or removal, based on data characteristics. Outliers, if detected, are addressed using robust methods like IQR-based filtering or capping to ensure model stability.
-
-- Customer Segmentation (RQ1): K-Means clustering, combined with Principal Component Analysis (PCA), is used to segment customers based on transactional and demographic attributes. The optimal clustering configuration is selected based on the highest silhouette score, ensuring distinct and meaningful customer groups. PCA loadings and means for the top two principal components (PCA 1 & 2) are analyzed to identify key attributes driving segment differences, enabling interpretable insights into customer behaviors for stakeholders.
-
-- Profitability Forecasting (RQ2): Monte Carlo simulation estimates probabilistic revenue ranges per customer segment, prioritizing high-value segments (e.g., sales revenue > $10,000 per customer). The revenue formula, total_sales_revenue = (total_transactions × avg_transaction_value – total_transactions × avg_discount_per_transaction) × (1 − churned), guides channel-specific estimates, optimizing marketing and inventory planning.
-
-- Statistical Analysis (RQ2): Anderson Darling was employed to detect normality for numeric attributes. Kruskal-Wallis and Chi-square tests identify significant attributes (p < 0.10) influencing the cluster variable. The Friedman test is also employed to evaluate differences in ranks of key Monte Carlo simulation outputs; total_transactions, avg_transaction_value, total_discounts_recieved, and total_returned_value across customer clusters within four various blocks (promotion channel, type, season, product category). This non-parametric approach isolates channel-specific effects on these variables, which are critical components of the segment-level revenue formula: total_sales_revenue = (total_transactions × avg_transaction_value – total_returned_value – total_discounts_receieved. Additionally, net revenue calculations for the high-value cluster across the various block’s guides marketing strategies, enabling retailers to optimize campaigns, allocate marketing spend efficiently, and enhance customer retention in a competitive retail landscape.
-
-- Predictive Modeling (RQ3): Machine learning models—Decision Trees, Random Forests, and K-Nearest Neighbors are applied to predict the top-performing sales revenue cluster. Attribute inputs include significant features (p < 0.10) identified via statistical tests (e.g., ANOVA, Kruskal-Wallis, Chi-square).Recursive Feature Elimination (RFE) and SMOTE address feature selection and class imbalance, respectively. Models are evaluated based on recall (target ≥ 0.90) for the high-value cluster, with feature importance rankings and confusion matrices ensuring interpretability for non-technical stakeholders. Key predictors, such as loyalty program participation, are explained in simple terms to support real-time decision-making. 12 initial models were evaluated: Decision Trees (DT), Random Forest (RF), and K-Nearest Neighbors (KNN), each with balanced (Bal) or unbalanced (No Bal) data and all features (All Feat) or selected features. 1 of the 12 models with the highest recall for the Cluster generating the highest mean total sales revenue was selected for further hyperparameter tuning to maximize identification of high-value customers for marketing optimization.
-
-- Interpretability and Actionability: Analytical outputs are designed for transparency and practical application. Clustering results highlight influential attributes driving segment differences, Monte Carlo outputs provide probabilistic revenue estimates for prioritizing high-value segments, and machine learning models offer clear feature importance rankings. These insights enable retailers to design personalized promotions, optimize marketing spend, align inventory with high-value segments, and enhance customer retention, fostering data-driven decisions to maximize profitability in a competitive retail environment.
-
----
-## Project Approach:
-<img width="881" alt="Project Approach - Steps - Process Map" src="https://github.com/user-attachments/assets/51c61967-7d50-4e90-b51d-08bed9221d12" />
+- Operational Optimization: To ensure equitable resource allocation, focus should also be allocated to Clusters 1 and 2 alongside Cluster 0.
+    - Optimize in-store strategies for Cluster 1 (total_items_purchased 0.214929) by enhancing store layouts and inventory near physical locations.
+    - For Cluster 2 (discount_applied 0.203976), design loyalty-based discount campaigns to re-engage infrequent shoppers, maximizing ROI.
 
 
 
