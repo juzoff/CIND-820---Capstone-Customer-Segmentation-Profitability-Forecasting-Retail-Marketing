@@ -9,6 +9,7 @@
 * #3 **RQ1 - Clustering & RQ2- Monte Carlo Simulation**
 * #4 **RQ2 - Statistical Analysis**
 * #5 **RQ3 - Machine Learning Models**
+* #6 **Practical Applications/Conclusion**
   
 ---
 ## Research Questions:
