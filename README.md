@@ -25,6 +25,8 @@ Visualization:
 - Validated sample representativeness with Anderson-Darling and Chi-square tests.
 - Conducted EDA using ydata-profiling to confirm no missing values, identify outliers, and guide feature engineering.
 
+![image](https://github.com/user-attachments/assets/279fa371-3bf4-4cb6-9455-7fb113aa2e22)
+
 ---
 ## Findings/Results/Insights
 - Simple Random Sampling (SRS):
