@@ -62,12 +62,19 @@ Visualizations:
 - Reduced dimensionality to 2 PCA components for clustering.
 - Checked normality of Monte Carlo input variables, confirming log-normal distributions.
 
+![image](https://github.com/user-attachments/assets/661b171c-3cbd-4ac4-959b-b11eb57e9b38)
+
 ---
 ## Findings/Results/Insights
 
 - Clustering (RQ1) - SRS, Stratified & Systematic Datasets:
   - Results: All three datasets confirmed 3 optimal clusters via silhouette scores and elbow method. 
   - Insights: Consistent cluster structures validate segmentation across sampling methods.
+
+![image](https://github.com/user-attachments/assets/af7a3545-c16a-4ca4-8084-d387863be39e)
+![image](https://github.com/user-attachments/assets/8307e6a8-a0e5-4699-b119-8c22153907df)
+![image](https://github.com/user-attachments/assets/d5522df3-07b1-43fc-8365-126ade4ddcc2)
+
 
 - Monte Carlo Simulation (RQ2) - SRS Dataset:
   - Results: Cluster 0: Highest mean revenue ($8,739.37), non-churned $17,064.81 (5th-95th: $0.00–$36,540.89). Cluster 1: $6,184.55 (non-churned $12,200.96). Cluster 2: $7,135.47 (non-churned $13,991.38). Churn sensitivity: 89% revenue drop at 90% churn (Cluster 0: $15,416.33 at 10% to $1,695.87 at 90%). Non-normal distributions confirmed (Anderson-Darling statistics: 74.8782–89.3025). Saved to srs_monte_carlo_results.csv.
@@ -86,8 +93,16 @@ Visualizations:
   - SRS’s Cluster 0 is the high-value segment ($8,739.37), ideal for RQ2 statistical analysis and RQ3 machine learning models due to unbiased sampling. Stratified supports income-driven analyses, while Systematic requires bias validation. High churn sensitivity across datasets emphasizes retention strategies for RQ2 and predictive features (e.g., days_since_last_purchase) for RQ3.
 
 - Further Clustering Insights (RQ1) - SRS Dataset:
-  - Results: K-Means with PCA (2 components) identified 3 optimal clusters via silhouette scores and elbow method. Saved to srs_clustering_results.csv, pca_scatter_plot.png, pc_contribution_heatmap.png.
-    - Cluster 0 (Multi-Channel High-Frequency Engaged Shoppers with Distant Store Access): High product_review_count (0.167, PC1), distance_to_store (0.300, PC2), online_purchases (0.223, PC2), days_since_last_purchase (-0.152, PC1), in_store_purchases (0.012, PC1), website_visits (0.097, PC2).
+  - Results: K-Means with PCA (2 components) identified 3 optimal clusters via silhouette scores and elbow method. 
+    - Cluster 0 (Multi-Channel High-Frequency Engaged Shoppers with Distant Store Access): Represents customers who shop frequently across online, in-store, and social media channels, live farther from stores, and engage actively with the brand.
+      - PCA Loadings: 
+        - High PC1 loadings for num__product_review_count (0.351882), num__days_since_last_purchase (0.320798), and num__customer_support_calls (0.233369) indicate strong engagement. High PC2 loadings for num__distance_to_store (0.305939), num__last_purchase_month (0.272100), and num__total_transactions (0.260227) reflect frequent digital purchases and distant store locations.
+      - PCA1/PCA2 for Each Individual Attribute:
+        -  num__distance_to_store (0.300149 from PC2), num__online_purchases (0.223115 from PC2), num__product_review_count (0.167017 from PC1), and num__total_transactions (0.255302 from PC2) confirm high digital engagement and transaction frequency.
+      - Sales Revenue
+        - Balanced across in-store ($13,942.04), online ($14,258.55), and social media ($14,250.46), totaling $42,551.05, showing multi-channel activity.
+      - Representation:
+        - Tech-savvy, high-frequency shoppers who engage across channels, ideal for digital marketing campaigns.
       ![image](https://github.com/user-attachments/assets/cd3c1f6e-7291-4f1e-bd58-f2c67e17bacb)
       - *The above chart was used through standardizing the attribute values (excluding the "Cluster" column) by applying min-max scaling to ensure all features are on a comparable scale (0 to 1), then creating a parallel coordinates plot to visualize the standardized profiles of three customer clusters, with each line representing a cluster's characteristics across multiple features, annotated with PCA loadings for interpretability, and includes a descriptive caption explaining the clusters and axes*
 
