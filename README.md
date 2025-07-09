@@ -56,6 +56,8 @@ Model Evaluation:
 - Imputed missing values (mean for numeric, most_frequent for categorical), scaled numeric features, and one-hot encoded categorical features.
 - Applied SMOTE and RandomUnderSampler for balanced variations (30,000 samples, 10,000 per cluster; tuned model: 32,000 samples with Cluster 0 at 12,000).
 
+![image](https://github.com/user-attachments/assets/9b02b5d4-f03d-494e-86cc-12b90d7f0537)
+
 ---
 ## Findings/Results/Insights
 - Model Testing:
