@@ -32,6 +32,8 @@ Outlier Detection:
 - Extracted temporal features from datetime columns and dropped original dates.
 - Detected outliers using IQR, identifying high-value transactions and discounts.
 
+![image](https://github.com/user-attachments/assets/9202f0bf-03b3-49f7-847b-20f6ddc9b934)
+
 ---
 ## Findings/Results/Insights
 - Simple Random Sampling (SRS):
