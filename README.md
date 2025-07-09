@@ -53,6 +53,7 @@ Visualizations:
 - Handled missing values by dropping NaN rows in Friedman test analyses.
 - Filtered categorical/numeric columns to ensure compatibility with dataset attributes.
 
+![image](https://github.com/user-attachments/assets/da401351-956b-42db-be44-254034b920d4)
 ---
 ## Findings/Results/Insights
 - Chi-Square Analysis:
