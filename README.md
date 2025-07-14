@@ -72,6 +72,8 @@ Model Evaluation:
   - Implications: Tuned Random Forest is robust for predicting Cluster 0 (high-value shoppers), supporting targeted marketing in RQ3.
 
 ![image](https://github.com/user-attachments/assets/1b460a11-5f4d-4507-99e1-c747c7a73eeb)
+<img width="878" height="484" alt="image" src="https://github.com/user-attachments/assets/1aadf435-19c5-4149-bb60-136229829726" />
+<img width="879" height="481" alt="image" src="https://github.com/user-attachments/assets/1113d741-aae3-4ab4-b166-14ec4b87ddf0" />
 
 ---
 ## Files:
