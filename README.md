@@ -90,15 +90,24 @@ Visualizations:
   - Implications: SRS is preferred for RQ2; Stratified suits income-focused analyses.
 
 - Comparative Insights:
-  - SRS’s Cluster 0 is the high-value segment ($8,739.37), ideal for RQ2 statistical analysis and RQ3 machine learning models due to unbiased sampling. Stratified supports income-driven analyses, while Systematic requires bias validation. High churn sensitivity across datasets emphasizes retention strategies for RQ2 and predictive features (e.g., days_since_last_purchase) for RQ3.
+  - Simple Random Sample's (SRS’s) Cluster 0 is the high-value segment ($8,739.37), ideal for RQ2 statistical analysis and RQ3 machine learning models due to unbiased sampling.
+  - SRS's Cluster 0  is the "golden egg" cluster.
+  - Only the SRS dataset was used for the remaining of the project (RQ2: Statistical Analysis & RQ3: Machine Learning). 
+
+<img width="1094" height="614" alt="image" src="https://github.com/user-attachments/assets/63e90d9c-f9d5-48f9-821c-2219b340e2b8" />
+
 
 - Further Clustering Insights (RQ1) - SRS Dataset:
   - Results: K-Means with PCA (2 components) identified 3 optimal clusters via silhouette scores and elbow method. 
     - Cluster 0 (Multi-Channel High-Frequency Engaged Shoppers with Distant Store Access): Represents customers who shop frequently across online, in-store, and social media channels, live farther from stores, and engage actively with the brand.
       - PCA Loadings: 
-        - High PC1 loadings for num__product_review_count (0.351882), num__days_since_last_purchase (0.320798), and num__customer_support_calls (0.233369) indicate strong engagement. High PC2 loadings for num__distance_to_store (0.305939), num__last_purchase_month (0.272100), and num__total_transactions (0.260227) reflect frequent digital purchases and distant store locations.
+        - High PC1 loadings for num__product_review_count (0.351882), num__days_since_last_purchase (0.320798), and num__customer_support_calls (0.233369) indicate strong engagement.
+        - High PC2 loadings for num__distance_to_store (0.305939), num__last_purchase_month (0.272100), and num__total_transactions (0.260227) reflect frequent digital purchases and distant store locations.
       - PCA1/PCA2 for Each Individual Attribute:
-        -  num__distance_to_store (0.300149 from PC2), num__online_purchases (0.223115 from PC2), num__product_review_count (0.167017 from PC1), and num__total_transactions (0.255302 from PC2) confirm high digital engagement and transaction frequency.
+        -  **Multi-Channel**: Positive PCA contributions for num__online_purchases (0.100346 for PC1, 0.223115 for PC2) and num__in_store_purchases (0.012516 for PC1, 0.021864 for PC2) indicate engagement in both online and physical store environments.
+        -  **High-Frequency**: High num__total_transactions (0.008785 for PC1, 0.255302 for PC2) and low num__days_since_last_purchase (-0.152263 for PC1, 0.015908 for PC2) reflect frequent transactions and recent purchases, distinguishing them from less active clusters.
+        -  **Engaged**: High num__product_review_count (0.167017 for PC1, -0.032057 for PC2), num__customer_support_calls (0.110766 for PC1, -0.260762 for PC2), and num__website_visits (0.032828 for PC1, 0.097240 for PC2) highlight active interaction with the brand through reviews, customer support, and website visits.
+        -  **Shoppers with Distant Store Access**: High num__distance_to_store (0.011509 for PC1, 0.300149 for PC2) specifies their geographic tendency to be farther from stores, influencing their strong online presence while not precluding in-store activity.
       - Sales Revenue
         - Balanced across in-store ($13,942.04), online ($14,258.55), and social media ($14,250.46), totaling $42,551.05, showing multi-channel activity.
       - Representation:
