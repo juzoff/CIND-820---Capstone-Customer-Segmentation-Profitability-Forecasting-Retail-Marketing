@@ -66,6 +66,10 @@ Model Evaluation:
 
 ![image](https://github.com/user-attachments/assets/a6f2bd5f-488c-4e57-954d-0f6716431198)
 
+- Further Hyperparameter Tuning Done:
+
+<img width="1069" height="601" alt="image" src="https://github.com/user-attachments/assets/78e94f14-3d5b-49d6-b7cf-3feef7bb62c6" />
+
 - Further Hyperparameter Tuned Results:
   - recall 0.84, precision 0.76, F1-score 0.80, specificity 0.8353. 5-fold StratifiedKFold CV: mean F1-score 0.7400 (scores: [0.7365, 0.7488, 0.7381, 0.7398, 0.7367], std: 0.0045)
   - Insights: Tuned Random Forest improved recall by 0.12 (0.72 to 0.84) via class weights and increased Cluster 0 samples, though below 0.90 target. Low CV standard deviation (0.0045) confirms stable performance.  Top features: customer_support_calls, product_review_count, days_since_last_purchase, online_purchases.
@@ -74,6 +78,7 @@ Model Evaluation:
 ![image](https://github.com/user-attachments/assets/1b460a11-5f4d-4507-99e1-c747c7a73eeb)
 <img width="878" height="484" alt="image" src="https://github.com/user-attachments/assets/1aadf435-19c5-4149-bb60-136229829726" />
 <img width="879" height="481" alt="image" src="https://github.com/user-attachments/assets/1113d741-aae3-4ab4-b166-14ec4b87ddf0" />
+<img width="831" height="726" alt="image" src="https://github.com/user-attachments/assets/954f012a-5328-48e6-8dd4-bf0100e97f03" />
 
 ---
 ## Files:
