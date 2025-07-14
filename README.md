@@ -70,10 +70,23 @@ Model Evaluation:
 
 <img width="1069" height="601" alt="image" src="https://github.com/user-attachments/assets/78e94f14-3d5b-49d6-b7cf-3feef7bb62c6" />
 
+  - Further Hyperparameter Tuned - Random Forest – Balanced – All Features Model: Expanded the hyperparameter grid and introduced a custom scorer:
+    - n_estimators: [50, 100, 150, 200, 250] (added 200, 250)
+    - max_depth: [None, 10, 15, 20, 25, 30] (added 25, 30)
+    - min_samples_split: [2, 5, 10]
+    - min_samples_leaf: [1, 2, 4, 6, 8] (added 6, 8)
+    - criterion: ['gini']
+    - class_weight: [{0: 1.5, 1: 1.0, 2: 1.0}] (introduced to prioritize Cluster 0)
+    - Scoring: Weighted F1-score (using make_scorer(f1_score, average='weighted'))
+    - Sampling Strategy: Original strategy targeted 10,000 samples per cluster (sampling_strategy_over = {0: 10000, 2: 10000}, sampling_strategy_under = {1: 10000}) using RandomUnderSampler for Cluster 1 and SMOTE for Clusters 0 and 2. Modified strategy increased Cluster 0 samples to 12,000 (sampling_strategy_over = {0: 12000, 2: 10000}), enhancing representation of the high-value cluster to improve recall
+    - Resulted in an improved recall of 0.84 for Cluster 0, reflecting better identification of high-value customers due to the expanded grid, class weights, and weighted F1-score prioritizing balanced performance across imbalanced classes.
+
+
+
 - Further Hyperparameter Tuned Results:
   - recall 0.84, precision 0.76, F1-score 0.80, specificity 0.8353. 5-fold StratifiedKFold CV: mean F1-score 0.7400 (scores: [0.7365, 0.7488, 0.7381, 0.7398, 0.7367], std: 0.0045)
   - Insights: Tuned Random Forest improved recall by 0.12 (0.72 to 0.84) via class weights and increased Cluster 0 samples, though below 0.90 target. Low CV standard deviation (0.0045) confirms stable performance.  Top features: customer_support_calls, product_review_count, days_since_last_purchase, online_purchases.
-  - Implications: Tuned Random Forest is robust for predicting Cluster 0 (high-value shoppers), supporting targeted marketing in RQ3.
+  - Implications: Tuned Random Forest is robust for predicting Cluster 0 (high-value shoppers), supporting targeted marketing in RQ3. With an improved recall of 0.84 for Cluster 0, better identification of high-value customers due to the expanded grid, class weights, and weighted F1-score prioritizes balanced performance across imbalanced classes.
 
 ![image](https://github.com/user-attachments/assets/1b460a11-5f4d-4507-99e1-c747c7a73eeb)
 <img width="878" height="484" alt="image" src="https://github.com/user-attachments/assets/1aadf435-19c5-4149-bb60-136229829726" />
