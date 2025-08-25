@@ -12,13 +12,18 @@
     - Engagement-Driven Promotions (Priority):
       - Prioritize loyalty rewards and exclusive previews for Cluster 0 due to its high transaction frequency (total_transactions: 0.255302 from PC2, PCA loadings [0.018509 for PC1, 0.260227 for PC2]) but low membership duration (membership_years: -0.097108 from PC1, PCA loadings [0.204593 for PC1, 0.054198 for PC2]). This indicates that Cluster 0 customers are highly active but not necessarily long-term members, making retention through engagement-driven incentives critical to prevent churn and sustain their high-value contributions ($8,739.37 total mean sales revenue). Offer exclusive product previews or tiered loyalty rewards (e.g., bonus points for frequent online purchases) via social media and online platforms to encourage repeat purchases and foster long-term loyalty.
     - Deploy generative AI models to craft hyper-personalized social media ads for Cluster 0’s multi-channel shoppers targeting Groceries ($14,395.04) and Buy One Get One Free offers ($14,561.83) in Winter ($14,626.67) for peak revenue.
+    - Leverage In-Store Campaigns
+      - For its in-store engagement pattern, introduce limited-time seasonal bundles in physical stores combining Groceries and Winter essentials, reinforced with in-store exclusive Buy One Get One Free signage to attract foot traffic.
 - Retention Strategies:
   - Loyalty Programs
     - Address Cluster 0’s churn sensitivity (89% revenue drop at 90% churn) with loyalty programs tailored to its multi-channel, high frequency, engaged shoppers with distance store access profile.
       - Implement proactive support via chatbots or dedicated agents to maintain high-value relationships.
       - Implement loyalty programs to encourage repeat purchases.
       - Implement loyalty progrms to foster long-term loyalty
-          
+    - Loyalty Programs can contain:
+       - Tiered Rewards System
+       - Personalized Offers & Discounts
+       - Exclusive Access
 - Real-Time Customer Identification:
   - Deploy the further hyperparameter tuned Random Forest - Balanced - All Attributes model (recall: 0.84) in CRM systems for real-time classification of Cluster 0 customers.
 
